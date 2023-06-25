@@ -9,9 +9,16 @@ app.get('/', (req, res) => {
 })
 
 
-app.get('/profile', (req, res) => {
+app.get('/weather', (req, res) => {
   console.log('this is profile', new Date());
-res.send('this is profile' + new Date());
+
+  res.send({
+     city: 'America',
+     tempInC: 30,
+     humidity: 56,
+     high: 32,
+     low: 18
+  });
 })
 
 
